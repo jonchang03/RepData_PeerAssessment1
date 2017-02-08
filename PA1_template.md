@@ -1,11 +1,15 @@
 # Reproducible Research: Peer Assessment 1
 
+## change where generated figures are saved
+
+
 ## Set working directory and load libraries
 
 ```r
 library(knitr)
 setwd("~/DSU/datasciencecoursera/reproducibleresearch/RepData_PeerAssessment1")
 ```
+
 
 ## Loading and preprocessing the data
 1. Load the data (i.e. 𝚛𝚎𝚊𝚍.𝚌𝚜𝚟())
@@ -27,7 +31,7 @@ steps_per_day <- aggregate(steps ~ date, df, sum)
 hist(steps_per_day$steps, xlab="Total Steps per Day", main="Histogram of Total Number of Steps per Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](figure/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 mean(steps_per_day$steps)
@@ -54,7 +58,7 @@ steps_per_interval <- aggregate(steps ~ interval, df, mean)
 plot(steps_per_interval, type="l", xlab="5-min Intervals", ylab="Number of Steps", main="Average Number of Steps Across All Days" )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](figure/unnamed-chunk-4-1.png)<!-- -->
 
 ```r
 # interval with maximum number of steps
@@ -96,7 +100,7 @@ imputeDF <- aggregate(steps ~ date, newDF, sum)
 hist(imputeDF$steps, xlab="Total Steps per Day", main="Histogram of Total Number of Steps per Day (Imputed)")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](figure/unnamed-chunk-5-1.png)<!-- -->
 
 ```r
 mean(imputeDF$steps)
@@ -133,4 +137,4 @@ xyplot(steps ~ interval | factor(type_of_day),
        type = "l")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](figure/unnamed-chunk-6-1.png)<!-- -->

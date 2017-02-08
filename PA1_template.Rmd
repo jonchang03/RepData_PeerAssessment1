@@ -5,11 +5,19 @@ output:
     keep_md: true
 ---
 
+## change where generated figures are saved
+```{r opts, echo = FALSE}
+knitr::opts_chunk$set(
+  fig.path = "figure/"
+)
+```
+
 ## Set working directory and load libraries
 ```{r}
 library(knitr)
 setwd("~/DSU/datasciencecoursera/reproducibleresearch/RepData_PeerAssessment1")
 ```
+
 
 ## Loading and preprocessing the data
 1. Load the data (i.e. 𝚛𝚎𝚊𝚍.𝚌𝚜𝚟())
