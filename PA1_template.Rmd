@@ -5,7 +5,6 @@ output:
     keep_md: true
 ---
 
-## change where generated figures are saved
 ```{r opts, echo = FALSE}
 knitr::opts_chunk$set(
   fig.path = "figure/"
