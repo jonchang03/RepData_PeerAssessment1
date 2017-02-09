@@ -1,6 +1,5 @@
 # Reproducible Research: Peer Assessment 1
 
-## change where generated figures are saved
 
 
 ## Set working directory and load libraries
